@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <picture class="bg">
+    <source media="(min-width:1240px)" srcset="assets/home/background-home-desktop.jpg">
+    <source media="(min-width:768px)" srcset="assets/home/background-home-tablet.jpg">
+    <img src="assets/home/background-home-mobile.jpg" style="width: 100vw; height: 100vh;">
+  </picture>
+
+  <header class="header">
+    <div class="container flex">
+      <img class="logo" src="assets/shared/logo.svg" alt="Company Logo">
+      <div class="lineLogo"></div>
+      <nav id="nav" class="nav flex">
+        <a class="nav__item" href="index.html"><span>00</span> Home</a>
+        <a class="nav__item" href="destination-moon.html"><span>01</span> Destination</a>
+        <a class="nav__item" href="crew-specialist.html"><span>02</span> Crew</a>
+        <a class="nav__item" href="technology-capsule.html"><span>03</span> Technology</a>
+      </nav>
+      <div class="nav__line"></div>
+      <img id="hamburguer" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
+    </div>
+  </header>
+
+  <script>
+    function toggleMenu () {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+
+  <main class="main">
+    <div class="container main__container__section flex">
+      <section class="main__section">
+        <p>So, you want to travel to</p>
+        <h1>Space</h1>
+        <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!</p>
+      </section>
+      <section class="main__section__button">
+        <button>Explore</button>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
