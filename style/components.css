@@ -1,0 +1,82 @@
+/* General config */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--fontColor);
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.bg img {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fontSerif);
+}
+
+p,
+a {
+  font-family: var(--fontSansSerif);
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding: 25px;
+}
+
+/* Button */
+
+button,
+button:hover::after {
+  font-family: var(--fontSerif);
+  text-transform: uppercase;
+  font-size: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+}
+
+button:hover {
+  box-shadow: 1px 1px 1px 45px rgba(255, 255, 255, 0.096);
+}
+
+@media (min-width: 768px) {
+  button {
+    width: 242px;
+    height: 242px;
+    font-size: 32px;
+  }
+
+  button:hover {
+    box-shadow: 1px 1px 1px 65px rgba(255, 255, 255, 0.096);
+  }
+}
+
+@media (min-width: 1240px) {
+  button {
+    width: 274px;
+    height: 274px;
+  }
+}

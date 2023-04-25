@@ -1,0 +1,132 @@
+/* Header */
+header {
+  position: relative;
+}
+
+.nav {
+  visibility: hidden;
+  position: absolute;
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  background: transparent;
+  backdrop-filter: blur(25px);
+  padding: 90px 100px 100vh 35px;
+  height: 100vh;
+  z-index: 2;
+}
+
+.nav span {
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.nav__item {
+  padding: 15px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.nav.active {
+  visibility: visible;
+}
+
+.logo {
+  width: 40px;
+}
+
+#hamburguer {
+  margin: auto 0 auto auto;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav__line {
+  display: none;
+}
+
+.lineLogo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #hamburguer {
+    display: none;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav {
+    visibility: visible;
+    flex-direction: row;
+    top: -20px;
+    height: 20px;
+    padding: 50px 25px 30px;
+    background-color: rgba(255, 255, 255, 0.049);
+    bottom: 50px;
+    backdrop-filter: none;
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  .nav__item {
+    padding: 0 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .nav__line {
+    display: block;
+    position: absolute;
+    right: 368px;
+    top: 77px;
+    width: 45px;
+    height: 3px;
+    background-color: var(--fontColor);
+  }
+}
+
+@media (min-width: 1240px) {
+  header .container {
+    padding: 50px 28px;
+  }
+
+  .lineLogo {
+    width: 550px;
+    z-index: -1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.226);
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+
+  .nav__line {
+    z-index: 1;
+    top: 120px;
+    right: 670px;
+  }
+
+  .nav {
+    width: 700px;
+    height: 40px;
+    padding: 30px 70px 30px;
+    top: 20px;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(25px);
+    justify-content: space-around;
+  }
+
+  .nav span {
+    display: inline;
+  }
+}
