@@ -48,6 +48,14 @@ body {
 .bg {
   position: absolute;
   z-index: -1;
+  bottom: 0;
+}
+
+.bg img {
+  min-width: 100vw;
+  min-height: 100vh;
+  /* width: auto; */
+  /* height: auto; */
 }
 
 /* Header */
