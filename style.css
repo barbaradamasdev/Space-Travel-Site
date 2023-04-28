@@ -9,91 +9,321 @@
   --fontSansSerif: "Barlow", sans-serif;
 }
 
-/* Main home section */
+/* Main section */
 
-.main__container__section {
-  height: 80vh;
+.content__section {
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
+  margin: 0 auto;
+  position: relative;
 }
 
-.main__section :nth-child(1),
-.main__section :nth-child(2) {
+.home .content__section {
+  margin: 10vh auto !important;
+}
+
+.destination .content__card {
+  justify-content: center;
+}
+
+.destination .card {
+  flex-direction: column;
+}
+
+.home .content__left {
+  height: 40vh;
+  margin: 2vh auto;
+}
+.content__right {
+  height: 30vh;
+}
+
+.destination .cardImage {
+  width: 170px;
+  height: 170px;
+  margin: 8px auto 10px;
+}
+
+.pretitle,
+.title,
+.textGeneral {
   text-transform: uppercase;
 }
 
-.main__section :nth-child(1) {
+.pretitle,
+.textGeneral {
   font-size: 16px;
   word-spacing: 2.7px;
   color: var(--purpleColor);
-  margin: 15px 0;
+  text-decoration: none;
 }
 
-.main__section :nth-child(2) {
+.textGeneral {
+  margin: 10px;
+  position: relative;
+}
+
+.data {
+  font-size: 26px;
+  font-family: var(--fontSerif);
+  text-transform: uppercase;
+  margin: 8px auto;
+}
+
+.destination .pretitle {
+  text-align: center;
+  margin: -25px auto 15px;
+}
+.card__categories .moon-category::after,
+.card__categories .mars-category::after,
+.card__categories .europe-category::after,
+.card__categories .titan-category::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--fontColor);
+  opacity: 0;
+}
+
+.card__categories .moon-category:hover:after,
+.card__categories .mars-category:hover:after,
+.card__categories .europe-category:hover:after,
+.card__categories .titan-category:hover:after {
+  opacity: 20%;
+}
+
+.destination .card__categories {
+  margin: 8px auto 30px;
+}
+
+.destination .content__right {
+  height: 425px;
+  margin: auto;
+}
+
+.destination .dataInfo {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.destination .pretitle span {
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.title {
   font-size: 80px;
   margin: 20px 0;
   font-weight: 300;
   line-height: 100px;
 }
 
-.main__section :nth-child(3) {
-  max-width: 400px;
+.destination .title {
+  font-size: 56px;
+  margin: 0;
+  line-height: 1;
+}
+
+hr {
+  opacity: 20%;
+  margin: 25px auto;
+}
+
+.description {
   font-size: 15px;
   margin: 20px auto;
   line-height: 25px;
   color: var(--purpleColor);
 }
 
-.main__section__button {
+.home .description {
+  max-width: 400px;
+}
+
+.destination .description {
+  margin: 0;
+}
+
+button {
   margin: auto;
 }
 
+/* Destination Cards */
+
+.content__card {
+  margin: auto;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  max-width: 100vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+/* Moon */
+#cards__move {
+  position: relative;
+  top: 0;
+}
+
+.cardMoon {
+}
+
+.cardMars {
+  left: 2000px;
+  /* left: 2000px; */
+}
+
+.cardEuropa {
+  left: 2000px;
+  /* left: 4000px; */
+}
+
+.cardTitan {
+  left: 2000px;
+  /* left: 6000px; */
+}
+
+/* MUDARRRRRRRRRRRRRRRRRRRRR */
+.moon-category::after {
+  opacity: 1 !important;
+}
+
+/* Mars */
+
+#moon.active,
+#mars.active {
+  transform: translate(0);
+  transition: transform 2s;
+}
+
+#mars.inactive {
+  transform: translate(500px);
+  transition: transform 2s;
+}
+
+/* /////////////////////// */
 /* Tablet */
 @media (min-width: 768px) {
-  .main__section :nth-child(1) {
+  .home .content__left {
+    height: 45vh;
+    margin: auto;
+  }
+
+  .destination .card__left {
+    height: 40vh;
+  }
+
+  .destination .cardImage {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
+
+  .home .content__right {
+    height: 20vh;
+  }
+
+  .destination .card__right {
+    justify-content: center;
+  }
+
+  .pretitle {
     font-size: 20px;
     margin: 15px 0;
   }
 
-  .main__section :nth-child(2) {
+  .title {
     font-size: 150px;
     margin: 50px auto;
   }
 
-  .main__section :nth-child(3) {
+  .destination .description {
     font-size: 16px;
-    width: 55vh;
-    margin: auto;
     line-height: 40px;
+    max-width: 575px;
   }
 
-  .main__container__section {
-    gap: 60px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1240px) {
-  .main__container__section {
-    flex-direction: row;
-    gap: 100px;
-  }
-
-  main .container {
-    max-width: 1110px;
-    margin: auto;
-  }
-
-  .main__section {
-    height: 382px;
-    margin: auto 0;
-    width: 450px;
+  .destination .pretitle {
     text-align: left;
   }
 
-  .main__section__button {
+  .destination .moonImage {
+    max-width: 300px;
+  }
+
+  .destination .dataInfo {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* /////////////////////// */
+/* Desktop */
+@media (min-width: 1240px) {
+  .content__section {
+    flex-direction: row;
+    gap: 100px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .destination .card {
+    flex-direction: row;
+    height: 65vh;
+  }
+
+  .destination .card__left {
+    margin: auto;
+  }
+
+  .destination .card__right {
+    width: 50vh;
+    margin: auto 50px;
+  }
+
+  .content__left {
+    height: 100%;
+    margin: auto;
+  }
+
+  .content__right {
+    height: 100%;
+  }
+
+  .home .content__right {
     margin: auto;
     padding: 180px 0 0 180px;
+    height: 274px;
+  }
+
+  .destination .pretitle {
+    margin: 20px 0;
+  }
+
+  .destination .card {
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .destination .cardImage {
+    width: 450px;
+    height: 450px;
+  }
+
+  .destination .content__left {
+    height: 450px;
+    width: 450px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
   }
 }

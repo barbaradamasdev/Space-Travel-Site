@@ -39,6 +39,12 @@ a {
 
 .container {
   padding: 25px;
+  max-width: 1110px;
+  margin: auto;
+}
+
+.opacity {
+  opacity: 50%;
 }
 
 /* Button */
