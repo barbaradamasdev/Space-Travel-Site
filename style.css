@@ -521,6 +521,7 @@ hr {
   /* Profission name */
   .crew .card .pretitle {
     font-size: 32px;
+    text-align: left;
   }
 
   .technology .right .pretitle {
