@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --fontColor: #ffffff;
@@ -7,6 +8,7 @@
 
   --fontSerif: "Bellefair", serif;
   --fontSansSerif: "Barlow", sans-serif;
+  --fontCondensed: "Barlow Condensed", sans-serif;
 }
 
 /* Cards */
@@ -46,6 +48,10 @@
   align-items: center;
 }
 
+.crew .left {
+  margin: 0 auto;
+}
+
 /* Left card section */
 
 .right {
@@ -64,7 +70,8 @@ hr {
   margin: 25px auto;
 }
 .crew hr {
-  max-width: 300px;
+  max-width: 327px;
+  width: 327px;
   margin: 0;
 }
 
@@ -74,13 +81,13 @@ hr {
 
 /* Card image */
 .destination .cardImage {
-  width: 170px;
-  height: 170px;
-  margin: 8px auto 10px;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 10px;
 }
 
 .crew .cardImage {
-  height: 223px;
+  height: 253px;
 }
 
 .technology .left {
@@ -89,7 +96,7 @@ hr {
   background-position: center;
   width: 110vw;
   margin: 0 -50px;
-  height: 24vh;
+  height: 206px;
 }
 
 .cardVehicle .left {
@@ -119,6 +126,12 @@ hr {
   color: var(--purpleColor);
 }
 
+.pretitle,
+.textGeneral {
+  font-family: var(--fontCondensed);
+  letter-spacing: 3px;
+}
+
 .title {
   font-weight: 300;
   line-height: 100px;
@@ -143,7 +156,7 @@ hr {
 
 .technology .title {
   font-size: 24px;
-  margin-top: -55px;
+  margin-top: 0;
 }
 
 .pretitle {
@@ -152,10 +165,17 @@ hr {
   font-size: 16px;
 }
 
+.technology .card .pretitle {
+  font-weight: 200 !important;
+  margin: 30px auto -20px;
+}
+
 /* Profission name */
 .crew .card .pretitle {
   opacity: 50%;
   font-weight: 400;
+  font-family: var(--fontSerif);
+  margin: 30px auto 0;
 }
 
 /* Number of pretitle */
@@ -167,8 +187,9 @@ hr {
 /* Description */
 .description {
   font-size: 15px;
-  line-height: 25px;
+  line-height: 30px;
   color: var(--purpleColor);
+  max-width: 350px;
 }
 .home .description {
   margin: 20px auto;
@@ -205,14 +226,14 @@ hr {
 .crew .card__categories {
   margin: 40px auto 10px;
   position: absolute;
-  top: 220px;
+  top: 250px;
   left: 0;
   right: 0;
 }
 
 .technology .card__categories {
   position: static;
-  margin: 30px auto 0px;
+  margin: 40px auto 0px;
   display: flex;
   gap: 16px;
 }
@@ -358,6 +379,7 @@ hr {
 
   .description {
     font-size: 16px;
+    max-width: none;
   }
 
   /* Image */
@@ -404,7 +426,6 @@ hr {
   .technology .card {
     gap: 80px;
     max-width: 1100px;
-    /* height: 70vh; */
     margin: 70px auto;
   }
 

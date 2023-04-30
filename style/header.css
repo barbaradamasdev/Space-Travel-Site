@@ -39,6 +39,9 @@ header {
   padding: 15px 0;
   text-decoration: none;
   color: white;
+  font-family: var(--fontCondensed);
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 
 .nav__item::after {
