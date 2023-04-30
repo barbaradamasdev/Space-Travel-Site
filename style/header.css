@@ -44,7 +44,7 @@ header {
 
 .nav__item span {
   font-weight: 700;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .nav.active {
@@ -139,8 +139,13 @@ header {
 }
 
 @media (min-width: 1240px) {
+  .nav {
+    padding: 30px 100px 30px 80px;
+  }
+
   header .container {
-    margin: 0 auto;
+    max-width: 1300px;
+    position: relative;
   }
 
   .nav__item::after {
@@ -148,14 +153,14 @@ header {
   }
 
   .lineLogo {
-    width: 850px;
-    z-index: -1;
+    width: 570px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.226);
-    display: block;
-    margin: auto;
+    display: inherit;
     position: absolute;
     top: 50%;
+    left: 115px;
+    z-index: 1;
   }
 
   .nav__item span {

@@ -19,6 +19,7 @@ body {
 .bg img {
   min-width: 100vw;
   min-height: 100vh;
+  margin-bottom: -5px;
 }
 
 h1,
@@ -49,8 +50,8 @@ a {
 
 /* Button */
 
-button,
-button:hover::after {
+.bigButton,
+.bigButton:hover::after {
   font-family: var(--fontSerif);
   text-transform: uppercase;
   font-size: 20px;
@@ -64,24 +65,39 @@ button:hover::after {
   transition: 300ms;
 }
 
-button:hover {
+.bigButton:hover {
   box-shadow: 1px 1px 1px 45px rgba(255, 255, 255, 0.096);
 }
 
+.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--fontColor);
+  margin: 5px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.bullet:hover {
+  box-shadow: none;
+  transform: scale(1.5);
+}
+
 @media (min-width: 768px) {
-  button {
+  .bigButton {
     width: 242px;
     height: 242px;
     font-size: 32px;
   }
 
-  button:hover {
+  .bigButton:hover {
     box-shadow: 1px 1px 1px 65px rgba(255, 255, 255, 0.096);
   }
 }
 
 @media (min-width: 1240px) {
-  button {
+  .bigButton {
     width: 274px;
     height: 274px;
   }

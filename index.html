@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style/components.css">
   <link rel="stylesheet" href="style/header.css">
+  <script type="text/javascript" src="script.js"></script>
   
   <title>Space tourism website</title>
 </head>
@@ -29,37 +30,29 @@
 
   <header class="header">
     <div class="container flex">
-      <img class="logo" src="assets/shared/logo.svg" alt="Company Logo">
+        <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
       <div class="lineLogo"></div>
       <nav id="nav" class="nav flex">
-        <a class="nav__item nav__item--home" href="index.html"><span>00</span> Home</a>
-        <a class="nav__item nav__item--destination" href="destination.html"><span>01</span> Destination</a>
-        <a class="nav__item nav__item--crew" href="crew/crew-commander.html"><span>02</span> Crew</a>
-        <a class="nav__item nav__item--technology" href="technology/technology-vehicle.html"><span>03</span> Technology</a>
+        <a class="nav__item nav__item--home" href="index.html"><span>00</span>Home</a>
+        <a class="nav__item nav__item--destination" href="destination.html"><span>01</span>Destination</a>
+        <a class="nav__item nav__item--crew" href="crew.html"><span>02</span>Crew</a>
+        <a class="nav__item nav__item--technology" href="technology.html"><span>03</span>Technology</a>
       </nav>
       <img id="hamburguer" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
     </div>
   </header>
 
-  <script>
-    function toggleMenu () {
-      document.getElementById('nav').classList.toggle('active');
-    }
-  </script>
-
-  <main class="main">
-    <div class="container content__section flex">
-      <section class="content__left">
-        <p class="pretitle">So, you want to travel to</p>
-        <h1 class="title">Space</h1>
-        <p class="description">Let’s face it. if you want to go to space, you might as well genuinely go to 
-        outer space and not hover kind of on the edge of it. Well sit back, and relax 
-        because we’ll give you a truly out of this world experience!</p>
-      </section>
-      <section class="content__right">
-        <button>Explore</button>
-      </section>
-    </div>
+  <main class="container card content flex">
+    <section class="left card__text">
+      <p class="pretitle">So, you want to travel to</p>
+      <h1 class="title">Space</h1>
+      <p class="description">Let’s face it. if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we’ll give you a truly out of this world experience!</p>
+    </section>
+    <section class="right">
+      <button class="bigButton">Explore</button>
+    </section>
   </main>
 </body>
 </html>

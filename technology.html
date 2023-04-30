@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/components.css">
+  <link rel="stylesheet" href="style/header.css">
+  <script type="text/javascript" src="script.js"></script>
+  
+  <title>Space tourism website</title>
+</head>
+<body class="technology">
+  
+  <style>
+    .nav__item--technology::after {opacity: 100 !important;}
+    .nav__item--technology:hover:after {opacity: 100 !important;}
+    @media (max-width:767px) {
+      .nav__item--technology::after {opacity: 0 !important;}
+    }
+  </style>
+
+  <picture class="bg">
+    <source media="(min-width:1240px)" srcset="assets/technology/background-technology-desktop.jpg">
+    <source media="(min-width:768px)" srcset="assets/technology/background-technology-tablet.jpg">
+    <img src="assets/technology/background-technology-mobile.jpg">
+  </picture>
+
+  <header class="header">
+    <div class="container flex">
+        <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
+      <div class="lineLogo"></div>
+      <nav id="nav" class="nav flex">
+        <a class="nav__item nav__item--home" href="index.html"><span>00</span>Home</a>
+        <a class="nav__item nav__item--destination" href="destination.html"><span>01</span>Destination</a>
+        <a class="nav__item nav__item--crew" href="crew.html"><span>02</span>Crew</a>
+        <a class="nav__item nav__item--technology" href="technology.html"><span>03</span>Technology</a>
+      </nav>
+      <img id="hamburguer" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="card_title">
+        <p class="pretitle pretitleCategory"><span class="opacity">03</span> Space launch 101</p>
+    </section>
+
+    <section class="cards__move flex">
+        <!-- Vehicle card -->
+        <section class="card cardVehicle flex" id="vehicle">
+            <section class="left flex">
+              <image class="cardImage"></image>
+            </section>
+
+            <section class="card__categories">
+                <button onclick="changeOne()" class="one-category numberButton">1</button>
+                <button onclick="changeTwo()" class="two-category numberButton">2</button>
+                <button onclick="changeThree()" class="three-category numberButton">3</button>
+            </section>
+
+            <section class="right flex card__text">
+                <h1 class="pretitle">The terminology...</h1>
+                <h1 class="title">Launch vehicle</h1>
+                <p class="description">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+                    payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+                    WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+                    it's quite an awe-inspiring sight on the launch pad!</p>
+            </section>
+        </section>
+
+        <!-- Spaceport card -->
+        <section class="card cardSpaceport flex" id="spaceport">
+            <section class="left flex">
+              <image class="cardImage"></image>
+            </section>
+
+            <section class="card__categories">
+                <button onclick="changeOne()" class="one-category numberButton">1</button>
+                <button onclick="changeTwo()" class="two-category numberButton">2</button>
+                <button onclick="changeThree()" class="three-category numberButton">3</button>
+            </section>
+
+            <section class="right flex card__text">
+                <h1 class="pretitle">The terminology...</h1>
+                <h1 class="title">Spaceport</h1>
+                <p class="description">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+                    by analogy to the seaport for ships or airport for aircraft. Based in the 
+                    famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+                    of the Earth’s rotation for launch.</p>
+            </section>
+        </section>
+
+        <!-- Capsule card -->
+        <section class="card cardCapsule flex" id="capsule">
+            <section class="left flex">
+              <image class="cardImage"></image>
+            </section>
+
+            <section class="card__categories">
+                <button onclick="changeOne()" class="one-category numberButton">1</button>
+                <button onclick="changeTwo()" class="two-category numberButton">2</button>
+                <button onclick="changeThree()" class="three-category numberButton">3</button>
+            </section>
+
+            <section class="right flex card__text">
+                <h1 class="pretitle">The terminology...</h1>
+                <h1 class="title">Space capsule</h1>
+                <p class="description">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+                    capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+                    you'll spend your time during the flight. It includes a space gym, cinema, 
+                    and plenty of other activities to keep you entertained.</p>
+            </section>
+        </section>
+    </section>
+  </main>
+</body>
+</html>
