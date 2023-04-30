@@ -13,6 +13,14 @@ header {
   flex-direction: column;
   padding: 90px 100px 100vh 35px;
   z-index: 1;
+  transform: translateX(400px);
+  transition: 1s;
+}
+
+.nav.active {
+  visibility: visible;
+  transform: translateX(0);
+  transition: 1s;
 }
 
 .nav::after {
@@ -47,10 +55,6 @@ header {
   margin-right: 8px;
 }
 
-.nav.active {
-  visibility: visible;
-}
-
 .logo {
   width: 40px;
 }
@@ -58,7 +62,14 @@ header {
 #hamburguer {
   margin: auto 0 auto auto;
   cursor: pointer;
-  z-index: 1;
+  z-index: 0;
+}
+
+#menuOff {
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  right: 27px;
 }
 
 .lineLogo {
@@ -70,6 +81,10 @@ header {
 }
 
 @media (min-width: 768px) {
+  #menuOff {
+    display: none;
+  }
+
   header .container {
     justify-content: space-between;
     align-items: center;
@@ -91,6 +106,7 @@ header {
     top: 0;
     height: 15px;
     padding: 30px 30px;
+    transform: translateX(0);
   }
 
   .nav::after {
