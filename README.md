@@ -19,10 +19,6 @@ The ideia of the challenge is to build out this multi-page space tourism website
 
 After finishing, I went to search of other professionals who already solved the challenge to se how I could improve. Satisfied with the result and movind on to the next one!
 
-This project is a collaboration between FrontEndMentor, Scrimba, and Kevin Powell. Actually you can see how Kevin would tackle the project: [Scrimba's free course](https://scrimba.com/learn/spacetravel). 
-
-=> I done all by myself and after that I`ll see how Kevin Powell made it.
-
 On this project you can see:
 - View the optimal layout for each of the website's pages depending on their device's screen size
 - See hover states for all interactive elements on the page
