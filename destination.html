@@ -6,7 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style/components.css">
   <link rel="stylesheet" href="style/header.css">
   <script type="text/javascript" src="script.js"></script>
   
@@ -14,14 +13,6 @@
 </head>
 <body class="destination">
   
-  <style>
-    .nav__item--destination::after {opacity: 100 !important;}
-    .nav__item--destination:hover:after {opacity: 100 !important;}
-    @media (max-width:767px) {
-      .nav__item--destination::after {opacity: 0 !important;}
-    }
-  </style>
-
   <picture class="bg">
     <source media="(min-width:1240px)" srcset="assets/destination/background-destination-desktop.jpg">
     <source media="(min-width:768px)" srcset="assets/destination/background-destination-tablet.jpg">
@@ -32,12 +23,12 @@
     <div class="container flex">
         <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
       <div class="lineLogo"></div>
-      <nav id="nav" class="nav flex">
+      <nav id="nav" class="nav flex uppercase">
         <img id="menuOff" src="assets/shared/icon-close.svg" onclick="toggleMenu()">
-        <a class="nav__item nav__item--home" href="index.html"><span>00</span>Home</a>
-        <a class="nav__item nav__item--destination" href="destination.html"><span>01</span>Destination</a>
-        <a class="nav__item nav__item--crew" href="crew.html"><span>02</span>Crew</a>
-        <a class="nav__item nav__item--technology" href="technology.html"><span>03</span>Technology</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="home" href="index.html"><span>00</span>Home</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="true" id="destination" href="destination.html"><span>01</span>Destination</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="crew" href="crew.html"><span>02</span>Crew</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="technology" href="technology.html"><span>03</span>Technology</a>
       </nav>
       <div id="hamburguer">
         <img id="menuOn" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
@@ -47,136 +38,136 @@
 
   <main class="container content">
     <section class="card__title">
-        <p class="pretitle pretitleCategory"><span class="opacity">01</span> Pick your destination</p>
+        <p class="pretitle uppercase f-condensed fw-low fs-h4"><span class="opacity">01</span> Pick your destination</p>
     </section>
 
     <section class="cards__move flex">
         <!-- Moon card -->
-        <section class="card cardMoon flex" id="moon">
+        <section class="card flex" id="moon">
             <section class="left flex">
                 <img class="cardImage" src="assets/destination/image-moon.png" alt="Moon">
             </section>
 
             <section class="right card__text">
                 <div class="card__categories">
-                    <a href="#" onclick="changeMoon()" id class="moon-category textGeneral">Moon</a>
-                    <a href="#" onclick="changeMars()" class="mars-category textGeneral">Mars</a>
-                    <a href="#" onclick="changeEuropa()" class="europa-category textGeneral">Europa</a>
-                    <a href="#"  onclick="changeTitan()" class="titan-category textGeneral">Titan</a>
+                    <a href="#" onclick="changeMoon()" class="moon-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Moon</a>
+                    <a href="#" onclick="changeMars()" class="mars-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Mars</a>
+                    <a href="#" onclick="changeEuropa()" class="europa-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Europa</a>
+                    <a href="#"  onclick="changeTitan()" class="titan-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Titan</a>
                 </div>
 
-                <h1 class="title">Moon</h1>
-                <p class="description">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                <h2 class="uppercase fs-h2 fw-medium lh-100">Moon</h2>
+                <p class="description text-purple fs-sub1">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
                 <hr>
                 
-                <section class="cardInfo dataInfo flex">
+                <section class="cardInfo dataInfo flex uppercase">
                     <article class="dataLeft">
-                        <p class="textGeneral">Avg. distance</p>
-                        <p class="data">384,400 km</p>
+                        <p class="textGeneral f-condensed fw-low fs-sub2">Avg. distance</p>
+                        <p class="data f-serif fs-h4">384,400 km</p>
                     </article>                                
                     <article class="dataRight">
-                        <p class="textGeneral">Est. travel time</p>
-                        <p class="data">3 days</p>
+                        <p class="textGeneral f-condensed fw-low fs-sub2">Est. travel time</p>
+                        <p class="data f-serif fs-h4">3 days</p>
                     </article>                            
                 </section>
             </section>
         </section>
 
         <!-- Mars card -->
-        <section class="card cardMars flex" id="mars">
+        <section class="card flex" id="mars">
             <section class="left flex">
                 <img class="cardImage" src="assets/destination/image-mars.png" alt="mars">
             </section>
 
             <section class="right card__text">
                 <div class="card__categories">
-                    <a href="#" onclick="changeMoon()" class="moon-category textGeneral">Moon</a>
-                    <a href="#" onclick="changeMars()" class="mars-category textGeneral">Mars</a>
-                    <a href="#" onclick="changeEuropa()" class="europa-category textGeneral">Europa</a>
-                    <a href="#"  onclick="changeTitan()" class="titan-category textGeneral">Titan</a>
+                    <a href="#" onclick="changeMoon()" class="moon-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Moon</a>
+                    <a href="#" onclick="changeMars()" class="mars-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Mars</a>
+                    <a href="#" onclick="changeEuropa()" class="europa-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Europa</a>
+                    <a href="#"  onclick="changeTitan()" class="titan-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Titan</a>
                 </div>
 
-                <h1 class="title">Mars</h1>
-                <p class="description">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+                <h2 class="uppercase fs-h2 fw-medium lh-100">Mars</h2>
+                <p class="description text-purple fs-sub1">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
                     the tallest planetary mountain in our solar system. It’s two and a half times 
                     the size of Everest!</p>
                 <hr>
                 
-                <section class="cardInfo dataInfo flex">
+                <section class="cardInfo dataInfo flex uppercase">
                     <article class="dataLeft">
-                        <p class="textGeneral">Avg. distance</p>
-                        <p class="data">225 mil. km</p>
+                        <p class="textGeneral f-condensed fw-low fs-sub2">Avg. distance</p>
+                        <p class="data f-serif fs-h4">225 mil. km</p>
                     </article>                                
                     <article class="dataRight">
-                        <p class="textGeneral">Est. travel time</p>
-                        <p class="data">9 months</p>
+                        <p class="textGeneral f-condensed fw-low fs-sub2">Est. travel time</p>
+                        <p class="data f-serif fs-h4">9 months</p>
                     </article>                            
                 </section>
             </section>
         </section>
 
         <!-- Europa card -->
-        <section class="card cardEuropa flex" id="europa">
+        <section class="card flex" id="europa">
             <section class="left flex">
                 <img class="cardImage" src="assets/destination/image-europa.png" alt="Moon">
             </section>
 
             <section class="right card__text">
                     <div class="card__categories">
-                        <a href="#" onclick="changeMoon()" class="moon-category textGeneral">Moon</a>
-                        <a href="#" onclick="changeMars()" class="mars-category textGeneral">Mars</a>
-                        <a href="#" onclick="changeEuropa()" class="europa-category textGeneral">Europa</a>
-                        <a href="#"  onclick="changeTitan()" class="titan-category textGeneral">Titan</a>
+                        <a href="#" onclick="changeMoon()" class="moon-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Moon</a>
+                        <a href="#" onclick="changeMars()" class="mars-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Mars</a>
+                        <a href="#" onclick="changeEuropa()" class="europa-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Europa</a>
+                        <a href="#"  onclick="changeTitan()" class="titan-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Titan</a>
                     </div>
 
-                    <h1 class="title">Europa</h1>
-                    <p class="description">The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
+                    <h2 class="uppercase fs-h2 fw-medium lh-100">Europa</h2>
+                    <p class="description text-purple fs-sub1">The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
                         winter lover’s dream. With an icy surface, it’s perfect for a bit of 
                         ice skating, curling, hockey, or simple relaxation in your snug 
                         wintery cabin.</p>
                     <hr>
                     
-                    <section class="cardInfo dataInfo flex">
+                    <section class="cardInfo dataInfo flex uppercase">
                         <article class="dataLeft">
-                            <p class="textGeneral">Avg. distance</p>
-                            <p class="data">3628 mil. km</p>
+                            <p class="textGeneral f-condensed fw-low fs-sub2">Avg. distance</p>
+                            <p class="data f-serif fs-h4">3628 mil. km</p>
                         </article>                                
                         <article class="dataRight">
-                            <p class="textGeneral">Est. travel time</p>
-                            <p class="data">3 years</p>
+                            <p class="textGeneral f-condensed fw-low fs-sub2">Est. travel time</p>
+                            <p class="data f-serif fs-h4">3 years</p>
                         </article>                            
                     </section>
             </section>
         </section>
 
         <!-- Titan card -->
-        <section class="card cardTitan flex" id="titan">
+        <section class="card flex" id="titan">
             <section class="left flex">
                 <img class="cardImage" src="assets/destination/image-titan.png" alt="Moon">
             </section>
 
             <section class="right card__text">
                 <div class="card__categories">
-                    <a href="#" onclick="changeMoon()" class="moon-category textGeneral">Moon</a>
-                    <a href="#" onclick="changeMars()" class="mars-category textGeneral">Mars</a>
-                    <a href="#" onclick="changeEuropa()" class="europa-category textGeneral">Europa</a>
-                    <a href="#"  onclick="changeTitan()" class="titan-category textGeneral">Titan</a>
+                    <a href="#" onclick="changeMoon()" class="moon-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Moon</a>
+                    <a href="#" onclick="changeMars()" class="mars-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Mars</a>
+                    <a href="#" onclick="changeEuropa()" class="europa-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Europa</a>
+                    <a href="#"  onclick="changeTitan()" class="titan-category textGeneral uppercase fs-sub1 text-purple f-condensed fw-low">Titan</a>
                 </div>
 
-                <h1 class="title">Titan</h1>
-                <p class="description">The only moon known to have a dense atmosphere other than Earth, Titan 
+                <h2 class="title uppercase fs-h2 fw-medium lh-100">Titan</h2>
+                <p class="description text-purple fs-sub1">The only moon known to have a dense atmosphere other than Earth, Titan 
                     is a home away from home (just a few hundred degrees colder!). As a 
                     bonus, you get striking views of the Rings of Saturn.</p>
                 <hr>
                 
-                <section class="cardInfo dataInfo flex">
+                <section class="cardInfo dataInfo flex uppercase">
                     <article class="dataLeft">
-                        <p class="textGeneral">Avg. distance</p>
-                        <p class="data">1.6 bil. km</p>
+                        <p class="textGeneral f-condensed fw-low fs-sub2">Avg. distance</p>
+                        <p class="data f-serif fs-h4">1.6 bil. km</p>
                     </article>                                
                     <article class="dataRight">
-                        <p class="textGeneral">Est. travel time</p>
-                        <p class="data">7 years</p>
+                        <p class="textGeneral f-condensed fw-low fs-sub2">Est. travel time</p>
+                        <p class="data f-serif fs-h4">7 years</p>
                     </article>                            
                 </section>
             </section>

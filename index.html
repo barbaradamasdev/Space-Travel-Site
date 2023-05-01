@@ -6,21 +6,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style/components.css">
   <link rel="stylesheet" href="style/header.css">
   <script type="text/javascript" src="script.js"></script>
   
   <title>Space tourism website</title>
 </head>
 <body class="home">
-
-  <style>
-    .nav__item--home::after {opacity: 100 !important;}
-    .nav__item--home:hover:after {opacity: 100 !important;}
-    @media (max-width:767px) {
-      .nav__item--home::after {opacity: 0 !important;}
-    }
-  </style>
 
   <picture class="bg">
     <source media="(min-width:1240px)" srcset="assets/home/background-home-desktop.jpg">
@@ -32,12 +23,12 @@
     <div class="container flex">
         <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
       <div class="lineLogo"></div>
-      <nav id="nav" class="nav flex">
+      <nav id="nav" class="nav flex uppercase">
         <img id="menuOff" src="assets/shared/icon-close.svg" onclick="toggleMenu()">
-        <a class="nav__item nav__item--home" href="index.html"><span>00</span>Home</a>
-        <a class="nav__item nav__item--destination" href="destination.html"><span>01</span>Destination</a>
-        <a class="nav__item nav__item--crew" href="crew.html"><span>02</span>Crew</a>
-        <a class="nav__item nav__item--technology" href="technology.html"><span>03</span>Technology</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="true" id="home" href="index.html"><span>00</span>Home</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="destination" href="destination.html"><span>01</span>Destination</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="crew" href="crew.html"><span>02</span>Crew</a>
+        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="technology" href="technology.html"><span>03</span>Technology</a>
       </nav>
       <div id="hamburguer">
         <img id="menuOn" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
@@ -47,14 +38,13 @@
 
   <main class="container card content flex">
     <section class="left card__text">
-      <p class="pretitle">So, you want to travel to</p>
-      <h1 class="title">Space</h1>
-      <p class="description">Let’s face it. if you want to go to space, you might as well genuinely go to 
+      <h1 class="lh-100 uppercase fs-h1 f-serif ls-1 fw-medium"><span class="uppercase fs-h5 f-condensed noWrap" style="display: block">So, you want to travel to</span>Space</h1>
+      <p class="description text-purple fs-p">Let’s face it. if you want to go to space, you might as well genuinely go to 
       outer space and not hover kind of on the edge of it. Well sit back, and relax 
       because we’ll give you a truly out of this world experience!</p>
     </section>
     <section class="right">
-      <button class="bigButton">Explore</button>
+      <button class="bigButton text-black fs-button uppercase ls-1 f-serif">Explore</button>
     </section>
   </main>
 </body>
