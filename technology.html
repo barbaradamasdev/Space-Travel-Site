@@ -20,23 +20,26 @@
   </picture>
 
   <header class="header">
+    <div id="close-menu" onclick="toggleMenu()"></div>
     <div class="container flex">
-        <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
+      <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
       <div class="lineLogo"></div>
       <nav id="nav" class="nav flex uppercase">
-        <img id="menuOff" src="assets/shared/icon-close.svg" onclick="toggleMenu()">
-        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="home" href="index.html"><span>00</span>Home</a>
-        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="destination" href="destination.html"><span>01</span>Destination</a>
-        <a class="nav__item f-condensed fs-sub1" aria-selected="false" id="crew" href="crew.html"><span>02</span>Crew</a>
-        <a class="nav__item f-condensed fs-sub1" aria-selected="true" id="technology" href="technology.html"><span>03</span>Technology</a>
+        <ul class="flex">
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="false" id="home" href="index.html"><span class="fw-high">00</span>Home</a></li>
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="false" id="destination" href="destination.html"><span class="fw-high">01</span>Destination</a></li>
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="false" id="crew" href="crew.html"><span class="fw-high">02</span>Crew</a></li>
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="true" id="technology" href="technology.html"><span class="fw-high">03</span>Technology</a></li>
+        </ul>
       </nav>
-      <div id="hamburguer">
-        <img id="menuOn" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
+      <div class="menu-nav flex" id="menu-nav">
+        <img class="menuOpen" id="menuOpen" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
+        <img class="menuClosed" id="menuClosed" src="assets/shared/icon-close.svg" onclick="toggleMenu()">
       </div>
     </div>
   </header>
 
-  <main class="container content">
+  <main class="container">
     <section class="card_title">
         <p class="pretitle pretitleCategory uppercase f-condensed fw-low fs-h4"><span class="opacity">03</span> Space launch 101</p>
     </section>
@@ -55,8 +58,8 @@
             </section>
 
             <section class="right flex card__text">
-                <h4 class="uppercase f-condensed fw-low fs-sub1">The terminology...</h4>
-                <h2 class="uppercase fs-h6 fw-medium noWrap lh-100">Launch vehicle</h2>
+              <h2 class="uppercase fs-h6 fw-medium noWrap lh-100">Launch vehicle</h2>
+              <div style="order:-1" class="uppercase f-condensed fw-low fs-sub1">The terminology...</div>
                 <p class="description text-purple fs-14">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
                     payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
                     WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
@@ -77,8 +80,8 @@
             </section>
 
             <section class="right flex card__text">
-                <h2 class="uppercase f-condensed fw-low fs-sub1">The terminology...</h2>
-                <h2 class="uppercase fs-h6 fw-medium noWrap lh-100">Spaceport</h2>
+              <h2 class="uppercase fs-h6 fw-medium noWrap lh-100">Spaceport</h2>
+              <div style="order:-1" class="uppercase f-condensed fw-low fs-sub1">The terminology...</div>
                 <p class="description text-purple fs-14">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
                     by analogy to the seaport for ships or airport for aircraft. Based in the 
                     famous Cape Canaveral, our spaceport is ideally situated to take advantage 
@@ -99,8 +102,8 @@
             </section>
 
             <section class="right flex card__text">
-                <h2 class="uppercase f-condensed fw-low fs-sub1">The terminology...</h2>
-                <h2 class="uppercase fs-h6 fw-medium noWrap lh-100">Space capsule</h2>
+              <h2 class="uppercase fs-h6 fw-medium noWrap lh-100">Space capsule</h2>
+              <div style="order:-1" class="uppercase f-condensed fw-low fs-sub1">The terminology...</div>
                 <p class="description text-purple fs-14">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
                     capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
                     you'll spend your time during the flight. It includes a space gym, cinema, 

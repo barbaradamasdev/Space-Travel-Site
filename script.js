@@ -1,7 +1,11 @@
 /* Toggle Menu Hamburguer */
 function toggleMenu () {
     document.getElementById('nav').classList.toggle('active');
+    document.getElementById('menuOpen').classList.toggle('active');
+    document.getElementById('menuClosed').classList.toggle('active');
+    document.getElementById('close-menu').classList.toggle('active');
 }
+
 
 /* Functions destination */
 function changeMoon() {
