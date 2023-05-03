@@ -231,6 +231,7 @@ a {
 
 .crew .left {
   margin: 0 auto;
+  max-height: 200px;
 }
 
 .right {
@@ -254,8 +255,7 @@ hr {
   margin: 25px auto;
 }
 .crew hr {
-  max-width: 327px;
-  width: 327px;
+  width: 300px;
   margin: 0;
 }
 
@@ -265,13 +265,13 @@ hr {
 
 /* Card image */
 .destination .cardImage {
-  width: 190px;
-  height: 190px;
+  width: clamp(190px, 35vw, 445px);
+  /* height: clamp(170px, 10vw, 445px); */
   margin: 0 auto 10px;
 }
 
 .crew .cardImage {
-  height: 253px;
+  height: 250px;
 }
 
 .technology .left {
@@ -365,9 +365,13 @@ hr {
 .crew .card__categories {
   margin: 40px auto 10px;
   position: absolute;
-  top: 250px;
+  top: 270px;
   left: 0;
   right: 0;
+}
+
+.crew .card div {
+  margin-top: 50px;
 }
 
 .technology .card__categories {
@@ -503,17 +507,15 @@ hr {
     max-width: none;
   }
 
-  /* Image */
-  .destination .cardImage {
-    width: 300px;
-    height: 300px;
-    margin: auto auto 30px;
+  .crew .card {
+    gap: 50px;
   }
 
   .crew .cardImage {
-    height: 500px;
-    position: relative;
     bottom: 0px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
   }
 
   /* Specific stuff */
@@ -524,6 +526,10 @@ hr {
 
   .crew .card__categories {
     margin-top: 30px;
+  }
+
+  .crew .card div {
+    margin-top: 0px;
   }
 
   .crew hr {
@@ -619,17 +625,11 @@ hr {
     margin: auto 0;
   }
 
-  /* Image card */
-  .destination .cardImage {
-    width: 450px;
-    height: 450px;
-    margin: 0;
-  }
-
   .crew .cardImage {
     position: relative;
-    bottom: 50px;
-    height: 80vh;
+    bottom: 0px;
+    right: -100px;
+    max-height: none;
   }
 
   .technology .cardImage {
@@ -739,8 +739,8 @@ hr {
     height: 712px;
   }
 
-  .crew .cardImage {
+  /*  .crew .cardImage {
     bottom: -100px;
     height: 80vh;
-  }
+  } */
 }
