@@ -4,7 +4,7 @@
 
 ## 🔗 Link
 
-- [Live Version](https://barbaradamasdev.github.io/Space-Travel-Site/)
+- [Live Version](https://marvelous-smakager-724351.netlify.app/)
 
 ## 😄 Hello there!
 
