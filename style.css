@@ -1,23 +1,213 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
 
 :root {
-  --fontColor: #ffffff;
-  --blackColor: #0b0d17;
-  --purpleColor: #d0d6f9;
+  --clr-white: #ffffff;
+  --clr-black: #0b0d17;
+  --clr-purple: #d0d6f9;
 
-  --fontSerif: "Bellefair", serif;
-  --fontSansSerif: "Barlow", sans-serif;
-  --fontCondensed: "Barlow Condensed", sans-serif;
+  --f-Serif: "Bellefair", serif;
+  --f-SansSerif: "Barlow", sans-serif;
+  --f-Condensed: "Barlow Condensed", sans-serif;
+
+  --fs-h1: clamp(80px, 18vw, 150px);
+  --fs-h2: clamp(56px, 80px, 100px);
+  --fs-h3: clamp(16px, 3vw, 30px);
+  --fs-h4: clamp(16px, 20px, 28px);
+  --fs-h5: clamp(20px, 5vw, 28px);
+  --fs-h6: clamp(30px, 5vw, 56px);
+  --fs-sub1: clamp(16px, 17px, 18px);
+  --fs-sub2: 14px;
+  --fs-p: clamp(15px, 2vw, 18px);
+  --fs-button: clamp(20px, 5vw, 32px);
 }
+
+.fs-h1 {
+  font-size: var(--fs-h1);
+}
+.fs-h2 {
+  font-size: var(--fs-h2);
+}
+.fs-h3 {
+  font-size: var(--fs-h3);
+}
+.fs-h4 {
+  font-size: var(--fs-h4);
+}
+.fs-h5 {
+  font-size: var(--fs-h5);
+}
+.fs-h6 {
+  font-size: var(--fs-h6);
+}
+.fs-sub1 {
+  font-size: var(--fs-sub1);
+}
+.fs-sub2 {
+  font-size: var(--fs-sub2);
+}
+.fs-p {
+  font-size: var(--fs-p);
+}
+.fs-button {
+  font-size: var(--fs-button);
+}
+
+/* //////////////// */
+/* General settings */
+
+* {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--clr-white);
+  margin: 0;
+  position: relative;
+  z-index: 0;
+}
+
+body,
+html {
+  overflow: hidden;
+  height: 100vh;
+}
+
+body .destination,
+html .destination {
+  overflow-y: scroll;
+  overflow-y: scroll;
+}
+
+.bg {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+}
+
+.bg img {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin-bottom: -5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--f-Serif);
+  margin: 0;
+  font-size: 2rem;
+}
+
+p,
+a {
+  font-family: var(--f-SansSerif);
+  margin: 0;
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+.flex {
+  display: flex;
+}
+
+.f-condensed {
+  font-family: var(--f-Condensed);
+}
+
+.f-serif {
+  font-family: var(--f-Serif);
+}
+
+.ls-1 {
+  letter-spacing: 0.5px !important;
+}
+
+.fw-low {
+  font-weight: 200 !important;
+}
+.fw-medium {
+  font-weight: 300 !important;
+}
+.fw-high {
+  font-weight: 500 !important;
+}
+
+.lh-100 {
+  line-height: 100px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.text-black {
+  color: var(--clr-black);
+}
+
+.text-purple {
+  color: var(--clr-purple);
+}
+
+.container {
+  padding: 25px;
+  max-width: 1110px;
+  margin: auto;
+}
+
+.opacity {
+  opacity: 50%;
+}
+
+/* Button */
+
+.bigButton,
+.bigButton:hover::after {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms;
+}
+
+.bigButton:hover {
+  box-shadow: 1px 1px 1px 45px rgba(255, 255, 255, 0.096);
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr-white);
+  margin: 5px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.bullet:hover {
+  box-shadow: none;
+  transform: scale(1.5);
+}
+
+/* //////////////// */
+/* Content Settings */
 
 /* Cards */
 
 .cards__move {
   justify-content: center;
-  margin: auto;
   position: relative;
-  top: 0;
 }
 
 .card {
@@ -25,34 +215,23 @@
   justify-content: space-around;
   flex-direction: column;
   position: absolute;
-  max-width: 90vw;
   left: 0;
   right: 0;
   margin: 5vh auto;
+  min-height: 50vh;
+  max-height: 70vh;
 }
-
-.home .card {
-  height: 80vh;
-}
-
-.technology .card {
-  margin: 30px 0 0 0;
-}
-
-/* Left card section */
 
 .left {
-  margin: 2vh auto;
-  height: min(40vh, 100%);
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  height: 100%;
 }
 
 .crew .left {
   margin: 0 auto;
 }
-
-/* Left card section */
 
 .right {
   height: min(30vh, 425px);
@@ -61,7 +240,12 @@
 
 .technology .right {
   flex-direction: column;
-  height: 260px;
+  /* height: 260px; */
+  margin: auto;
+}
+
+.technology .right h4 {
+  margin-top: 20px;
 }
 
 /* HR line */
@@ -112,70 +296,21 @@ hr {
 }
 
 /* Card text */
-.pretitle,
-.title,
-.textGeneral {
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.pretitle,
-.textGeneral {
-  font-size: 16px;
-  word-spacing: 2.7px;
-  color: var(--purpleColor);
-}
-
-.pretitle,
-.textGeneral {
-  font-family: var(--fontCondensed);
-  letter-spacing: 3px;
-}
-
-.title {
-  font-weight: 300;
-  line-height: 100px;
-  margin: 0 auto -10px;
-}
-
-/* Specific margin and size title */
-.home .title {
-  font-size: 80px;
-  margin-top: 20px;
-}
-
-.destination .title {
-  font-size: 56px;
-  margin-top: 20px;
-}
-
-.crew .title {
-  font-size: 24px;
-  margin-top: -30px;
-}
-
-.technology .title {
-  font-size: 24px;
-  margin-top: 0;
-}
 
 .pretitle {
   text-align: center;
   margin: auto;
-  font-size: 16px;
 }
 
-.technology .card .pretitle {
-  font-weight: 200 !important;
-  margin: 30px auto -20px;
+.technology .card div,
+.crew .card div {
+  margin: 30px 0 -20px;
 }
 
 /* Profission name */
-.crew .card .pretitle {
-  opacity: 50%;
+.crew .card div {
   font-weight: 400;
-  font-family: var(--fontSerif);
-  margin: 30px auto 0;
+  margin: 0;
 }
 
 /* Number of pretitle */
@@ -186,9 +321,7 @@ hr {
 
 /* Description */
 .description {
-  font-size: 15px;
   line-height: 30px;
-  color: var(--purpleColor);
   max-width: 350px;
 }
 .home .description {
@@ -198,6 +331,11 @@ hr {
 /* Crew card with margin top (because of the category bullets position)*/
 .crew .card__text {
   margin-top: 50px;
+  flex-direction: column;
+}
+
+.technology .right div {
+  margin: 30px auto -10px;
 }
 
 /* Specifit destionation data info */
@@ -207,9 +345,6 @@ hr {
 }
 
 .destination .data {
-  text-transform: uppercase;
-  font-size: 26px;
-  font-family: var(--fontSerif);
   margin: 10px auto;
 }
 
@@ -221,6 +356,10 @@ hr {
 
 .destination .card__categories {
   margin: 8px auto 30px;
+}
+
+.crew .card {
+  gap: 70px;
 }
 
 .crew .card__categories {
@@ -250,7 +389,6 @@ hr {
   border: 0.07rem solid rgba(255, 255, 255, 0.3);
   color: white;
   cursor: pointer;
-  font-family: var(--fontSerif);
 }
 
 #vehicle .one-category,
@@ -275,7 +413,7 @@ hr {
   left: 0;
   height: 3px;
   width: 100%;
-  background-color: var(--fontColor);
+  background-color: var(--clr-white);
   opacity: 0;
 }
 
@@ -340,45 +478,28 @@ hr {
 
   .crew .card {
     flex-direction: column-reverse;
+    gap: 0;
+    max-height: 90vh;
   }
-
-  .pretitle {
-    font-size: 20px;
-  }
-
   /* Category name */
   .pretitleCategory {
-    text-align: left;
     font-weight: 500;
-  }
-
-  /* Profission name */
-  .crew .card .pretitle {
-    font-size: 24px;
   }
 
   /* Title */
   .home .title {
-    font-size: 150px;
     margin: 50px auto;
   }
 
   .destination .title {
-    font-size: 80px;
     margin: -20px auto 0;
   }
 
   .crew .title {
-    font-size: 40px;
     margin: -20px auto -10px;
   }
 
-  .technology .title {
-    font-size: 40px;
-  }
-
   .description {
-    font-size: 16px;
     max-width: none;
   }
 
@@ -392,7 +513,7 @@ hr {
   .crew .cardImage {
     height: 500px;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
   }
 
   /* Specific stuff */
@@ -408,19 +529,29 @@ hr {
   .crew hr {
     display: none;
   }
+
+  .bigButton {
+    width: 242px;
+    height: 242px;
+  }
+
+  .bigButton:hover {
+    box-shadow: 1px 1px 1px 65px rgba(255, 255, 255, 0.096);
+  }
 }
 
 /* Desktop */
 @media (min-width: 1240px) {
-  .content {
-    margin: auto;
-  }
-
   .card {
+    margin: auto;
     text-align: left;
     gap: 100px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .home .card {
+    height: 100vh;
   }
 
   .technology .card {
@@ -437,6 +568,14 @@ hr {
     margin: 0 auto;
   }
 
+  .technology .card div {
+    margin: 0;
+  }
+
+  .crew .card div {
+    margin: 0;
+  }
+
   .technology .left {
     width: 330px;
     background-image: none;
@@ -446,6 +585,7 @@ hr {
 
   .technology .right {
     margin-left: 0;
+    justify-content: center;
   }
 
   .technology .card :nth-child(1) {
@@ -462,6 +602,7 @@ hr {
 
   .card__text {
     height: 400px;
+    justify-content: center;
   }
 
   .crew .card {
@@ -519,39 +660,26 @@ hr {
   }
 
   .destination .title {
-    font-size: 100px;
     margin: 20px 0 20px;
   }
 
   .crew .title {
-    font-size: 56px;
     margin: -10px -100px 20px 0;
-    white-space: nowrap;
   }
 
   .technology .title {
-    font-size: 56px;
-    white-space: nowrap;
     margin: 0 0 10px;
   }
 
   .pretitle {
-    font-size: 28px;
     text-align: left;
   }
 
-  /* Profission name */
-  .crew .card .pretitle {
-    font-size: 32px;
-  }
-
   .technology .right .pretitle {
-    font-size: 16px;
     margin: auto 0;
   }
 
   .description {
-    font-size: 18px;
     line-height: 1.5;
   }
 
@@ -561,7 +689,7 @@ hr {
 
   .crew .card__categories {
     top: 520px;
-    margin-left: 5px;
+    left: 30px;
   }
 
   .technology .card__categories {
@@ -584,7 +712,6 @@ hr {
   .technology .numberButton {
     width: 80px;
     height: 80px;
-    font-size: 32px;
   }
 
   .destination .cardInfo {
@@ -598,6 +725,11 @@ hr {
 
   .destination hr {
     margin-left: 5px;
+  }
+
+  .bigButton {
+    width: 274px;
+    height: 274px;
   }
 }
 

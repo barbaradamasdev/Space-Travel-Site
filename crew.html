@@ -6,21 +6,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style/components.css">
   <link rel="stylesheet" href="style/header.css">
   <script type="text/javascript" src="script.js"></script>
   
   <title>Space tourism website</title>
 </head>
 <body class="crew">
-  
-  <style>
-    .nav__item--crew::after {opacity: 100 !important;}
-    .nav__item--crew:hover:after {opacity: 100 !important;}
-    @media (max-width:767px) {
-      .nav__item--crew::after {opacity: 0 !important;}
-    }
-  </style>
 
   <picture class="bg">
     <source media="(min-width:1240px)" srcset="assets/crew/background-crew-desktop.jpg">
@@ -29,25 +20,28 @@
   </picture>
 
   <header class="header">
+    <div id="close-menu" onclick="toggleMenu()"></div>
     <div class="container flex">
-        <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
+      <a href="index.html"><img class="logo" src="assets/shared/logo.svg" alt="Company Logo"></a>
       <div class="lineLogo"></div>
-      <nav id="nav" class="nav flex">
-        <img id="menuOff" src="assets/shared/icon-close.svg" onclick="toggleMenu()">
-        <a class="nav__item nav__item--home" href="index.html"><span>00</span>Home</a>
-        <a class="nav__item nav__item--destination" href="destination.html"><span>01</span>Destination</a>
-        <a class="nav__item nav__item--crew" href="crew.html"><span>02</span>Crew</a>
-        <a class="nav__item nav__item--technology" href="technology.html"><span>03</span>Technology</a>
+      <nav id="nav" class="nav flex uppercase">
+        <ul class="flex">
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="false" id="home" href="index.html"><span class="fw-high">00</span>Home</a></li>
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="false" id="destination" href="destination.html"><span class="fw-high">01</span>Destination</a></li>
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="true" id="crew" href="crew.html"><span class="fw-high">02</span>Crew</a></li>
+          <li><a class="nav__item f-condensed fs-sub1 fw-medium" aria-selected="false" id="technology" href="technology.html"><span class="fw-high">03</span>Technology</a></li>
+        </ul>
       </nav>
-      <div id="hamburguer">
-        <img id="menuOn" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
+      <div class="menu-nav flex" id="menu-nav">
+        <img class="menuOpen" id="menuOpen" src="assets/shared/icon-hamburger.svg" onclick="toggleMenu()">
+        <img class="menuClosed" id="menuClosed" src="assets/shared/icon-close.svg" onclick="toggleMenu()">
       </div>
     </div>
   </header>
 
-  <main class="container content">
+  <main class="container">
     <section class="card_title">
-        <p class="pretitle pretitleCategory"><span class="opacity">02</span> Meet your crew</p>
+        <p class="pretitle uppercase f-condensed fw-low fs-h4"><span class="opacity">02</span> Meet your crew</p>
     </section>
 
     <section class="cards__move flex">
@@ -59,11 +53,10 @@
             </section>
 
             <section class="right flex">
-                <div class="card__text">
-                    
-                    <h1 class="pretitle">Commander</h1>
-                    <h1 class="title">Douglas Hurley</h1>
-                    <p class="description">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+                <div class="card__text flex">
+                    <h3 class="uppercase fs-h6 fw-medium noWrap lh-100">Douglas Hurley</h3>
+                    <div style="order: -1;" class="opacity uppercase fs-h3">Commander</div>
+                    <p class="description text-purple fs-p">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
                         and former NASA astronaut. He launched into space for the third time as 
                         commander of Crew Dragon Demo-2.</p>
                 </div>
@@ -84,11 +77,10 @@
             </section>
 
             <section class="right flex">
-                <div class="card__text">
-                    
-                    <h1 class="pretitle">Mission Specialist</h1>
-                    <h1 class="title">Mark Shuttleworth</h1>
-                    <p class="description">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+                <div class="card__text flex">
+                    <h3 class="title uppercase fs-h6 fw-medium noWrap lh-100">Mark Shuttleworth</h3>
+                    <div style="order: -1;" class="opacity uppercase fs-h3">Mission Specialist</div>
+                    <p class="description text-purple fs-p">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
                         the Linux-based Ubuntu operating system. Shuttleworth became the first South 
                         African to travel to space as a space tourist.</p>
                 </div>
@@ -109,11 +101,10 @@
             </section>
 
             <section class="right flex">
-                <div class="card__text">
-                    
-                    <h1 class="pretitle">Pilot</h1>
-                    <h1 class="title"> Victor Glover</h1>
-                    <p class="description">Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+                <div class="card__text flex">
+                    <h3 class="title uppercase fs-h6 fw-medium noWrap lh-100"> Victor Glover</h3>
+                    <div style="order: -1;" class="opacity uppercase fs-h3">Pilot</div>
+                    <p class="description text-purple fs-p">Pilot on the first operational flight of the SpaceX Crew Dragon to the 
                         International Space Station. Glover is a commander in the U.S. Navy where 
                         he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
                         station systems flight engineer.</p>
@@ -135,11 +126,10 @@
             </section>
 
             <section class="right flex">
-                <div class="card__text">
-                    
-                    <h1 class="pretitle">Flight Engineer</h1>
-                    <h1 class="title">Anousheh Ansari</h1>
-                    <p class="description">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+                <div class="card__text flex">
+                    <h3 class="title uppercase fs-h6 fw-medium noWrap lh-100">Anousheh Ansari</h3>
+                    <div style="order: -1;" class="opacity uppercase fs-h3">Flight Engineer</div>
+                    <p class="description text-purple fs-p">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
                         Ansari was the fourth self-funded space tourist, the first self-funded woman to 
                         fly to the ISS, and the first Iranian in space.</p>
                 </div>

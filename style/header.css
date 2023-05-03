@@ -5,16 +5,47 @@ header {
 
 .nav {
   visibility: hidden;
-  text-transform: uppercase;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
-  flex-direction: column;
-  padding: 90px 100px 100vh 35px;
+  padding: 130px 0 100vh 35px;
   z-index: 1;
   transform: translateX(400px);
   transition: 1s;
+  background-color: rgba(0, 0, 0, 0.836);
+}
+
+/* From browsers not support filter blur */
+@supports (backdrop-filter: blur(25px)) {
+  .nav {
+    background: transparent;
+    backdrop-filter: blur(25px);
+  }
+}
+
+.nav ul {
+  list-style-type: none;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  width: 200px;
+}
+
+#crew,
+#home {
+  padding-right: 120px;
+}
+#destination,
+#technology {
+  padding-right: 60px;
+}
+
+.nav li > [aria-selected="true"] {
+  border-right: 8px solid rgb(255, 255, 255);
+}
+
+.nav li:hover {
+  border-right: 8px solid rgba(255, 255, 255, 0.26);
 }
 
 .nav.active {
@@ -23,38 +54,7 @@ header {
   transition: 1s;
 }
 
-.nav::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background: transparent;
-  backdrop-filter: blur(25px);
-  z-index: -1;
-}
-
-.nav__item {
-  padding: 15px 0;
-  text-decoration: none;
-  color: white;
-  font-family: var(--fontCondensed);
-  letter-spacing: 2px;
-  font-weight: 100;
-}
-
-.nav__item::after {
-  content: "";
-  position: absolute;
-  top: 45px;
-  height: 4px;
-  background-color: var(--fontColor);
-  opacity: 0 !important;
-}
-
 .nav__item span {
-  font-weight: 700;
   margin-right: 8px;
 }
 
@@ -62,39 +62,79 @@ header {
   width: 40px;
 }
 
-#hamburguer {
-  margin: auto 0 auto auto;
-  cursor: pointer;
-  z-index: 0;
-}
-
-#menuOff {
-  cursor: pointer;
-  position: absolute;
-  top: 35px;
-  right: 27px;
-}
-
 .lineLogo {
   display: none;
 }
 
-.nav__item::after {
-  opacity: 0;
+/* menu novo */
+
+header .container {
+  justify-content: space-between !important;
 }
 
+.menu-nav {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  perspective: 1000px;
+  align-items: center;
+  flex-direction: row;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.menuOpen,
+.menuClosed {
+  position: absolute;
+  width: 30px;
+  backface-visibility: hidden;
+  /* transform-style: preserve-3d; */
+  transition: all 1s ease;
+}
+
+.menuOpen {
+  transform: rotateY(0deg);
+}
+
+.menuClosed {
+  transform: rotateY(180deg);
+}
+
+.menuOpen.active {
+  transform: rotateY(-180deg);
+}
+
+.menuClosed.active {
+  transform: rotateY(0deg);
+}
+
+#close-menu,
+#close-menu:hover::after {
+  position: fixed;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(27, 108, 184, 0);
+  transition: backdrop-filter 2s;
+}
+
+#close-menu.active {
+  visibility: visible;
+  backdrop-filter: blur(1px);
+}
+
+/* menu novo */
+
 @media (min-width: 768px) {
-  #menuOff {
+  .menu-nav,
+  .nav__item span {
     display: none;
   }
 
   header .container {
     justify-content: space-between;
     align-items: center;
-  }
-
-  #hamburguer {
-    display: none;
   }
 
   .logo {
@@ -106,54 +146,45 @@ header {
     visibility: visible;
     position: relative;
     flex-direction: row;
-    top: 0;
     height: 15px;
-    padding: 30px 30px;
+    padding: 30px 0;
     transform: translateX(0);
-  }
-
-  .nav::after {
-    width: 150%;
-    left: 0;
-    right: 0;
-    height: 80px;
     background-color: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(30px);
+    width: 1300px;
+    margin-right: -800px;
+    justify-self: right;
   }
 
-  .nav__item span {
-    display: none;
+  #crew,
+  #home,
+  #destination,
+  #technology {
+    padding-right: 0;
   }
 
-  .nav__item {
-    padding: 0 20px;
-    height: 20px;
-    font-size: 14px;
-    position: relative;
+  .nav ul {
+    flex-direction: row;
   }
 
-  .nav__item::after {
-    content: "";
-    display: inherit;
-    position: absolute;
-    top: 45px;
-    height: 4px;
-    background-color: var(--fontColor);
-    opacity: 0;
+  .nav li a {
+    padding-bottom: 20px;
   }
 
-  .nav__item--home::after,
-  .nav__item--crew::after {
-    width: 60%;
-    margin-left: -5px;
+  .nav li > [aria-selected="false"] {
+    border: 0;
   }
 
-  .nav__item--destination::after,
-  .nav__item--technology::after {
-    width: 70%;
+  .nav li > [aria-selected="true"] {
+    border-right: 0;
+    border-bottom: 4px solid rgb(255, 255, 255);
   }
 
-  .nav__item:hover:after {
-    opacity: 20% !important;
+  .nav li:hover {
+    padding-bottom: 40px;
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.26);
   }
 }
 
@@ -165,10 +196,6 @@ header {
   header .container {
     max-width: 1300px;
     position: relative;
-  }
-
-  .nav__item::after {
-    margin-left: 0;
   }
 
   .lineLogo {
@@ -184,9 +211,5 @@ header {
 
   .nav__item span {
     display: inline;
-  }
-
-  .nav::after {
-    width: 100vw;
   }
 }
